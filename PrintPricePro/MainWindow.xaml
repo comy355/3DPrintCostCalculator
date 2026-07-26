@@ -1,4 +1,33 @@
 <Window x:Class="PrintPricePro.MainWindow"
  xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
  xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
- Title="PrintPrice Pro" Height="760" Width="560"><ScrollViewer><StackPanel Margin="20"><TextBlock Text="PrintPrice Pro" FontSize="26" FontWeight="Bold" Margin="0,0,0,20"/><TextBlock Text="Filament Used (g)"/><TextBox Name="FilamentUsedBox" TextChanged="InputChanged"/><TextBlock Text="Spool Weight (g)" Margin="0,10,0,0"/><TextBox Name="SpoolWeightBox" Text="1000" TextChanged="InputChanged"/><TextBlock Text="Spool Price" Margin="0,10,0,0"/><TextBox Name="SpoolPriceBox" TextChanged="InputChanged"/><TextBlock Text="Hours" Margin="0,10,0,0"/><TextBox Name="HoursBox" TextChanged="InputChanged"/><TextBlock Text="Minutes" Margin="0,10,0,0"/><TextBox Name="MinutesBox" TextChanged="InputChanged"/><TextBlock Text="Machine Rate / Hour" Margin="0,10,0,0"/><TextBox Name="MachineRateBox" TextChanged="InputChanged"/><TextBlock Text="Design Fee" Margin="0,10,0,0"/><TextBox Name="DesignFeeBox" Text="0" TextChanged="InputChanged"/><TextBlock Text="Profit Margin (%)" Margin="0,10,0,0"/><TextBox Name="ProfitBox" Text="20" TextChanged="InputChanged"/><Separator Margin="0,20,0,20"/><TextBlock Name="MaterialCostText" FontSize="16"/><TextBlock Name="MachineCostText" FontSize="16"/><TextBlock Name="ProductionCostText" FontSize="16"/><TextBlock Name="SellingPriceText" FontSize="28" FontWeight="Bold"/></StackPanel></ScrollViewer></Window>
+ Title="PrintPrice Pro" Height="780" Width="650" Background="#F4F4F4">
+<ScrollViewer VerticalScrollBarVisibility="Auto">
+<Grid Margin="20">
+<Grid.RowDefinitions><RowDefinition Height="Auto"/><RowDefinition Height="*"/></Grid.RowDefinitions>
+<TextBlock Text="PrintPrice Pro" FontSize="30" FontWeight="Bold"/>
+<StackPanel Grid.Row="1" Margin="0,20,0,0">
+<Border Background="White" CornerRadius="8" Padding="15"><StackPanel>
+<TextBlock FontSize="18" FontWeight="Bold" Text="Inputs"/>
+<UniformGrid Columns="2" Margin="0,10,0,0">
+<TextBlock Text="Filament Used (g)"/><TextBox Name="FilamentUsedBox" TextChanged="InputChanged"/>
+<TextBlock Text="Spool Weight (g)"/><TextBox Name="SpoolWeightBox" Text="1000" TextChanged="InputChanged"/>
+<TextBlock Text="Spool Price"/><TextBox Name="SpoolPriceBox" TextChanged="InputChanged"/>
+<TextBlock Text="Hours"/><TextBox Name="HoursBox" TextChanged="InputChanged"/>
+<TextBlock Text="Minutes"/><TextBox Name="MinutesBox" TextChanged="InputChanged"/>
+<TextBlock Text="Machine Rate / Hour"/><TextBox Name="MachineRateBox" TextChanged="InputChanged"/>
+<TextBlock Text="Design Fee"/><TextBox Name="DesignFeeBox" Text="0" TextChanged="InputChanged"/>
+<TextBlock Text="Profit Margin (%)"/><TextBox Name="ProfitBox" Text="20" TextChanged="InputChanged"/>
+</UniformGrid>
+</StackPanel></Border>
+<Border Margin="0,20,0,0" Background="White" CornerRadius="8" Padding="15"><StackPanel>
+<TextBlock FontSize="18" FontWeight="Bold" Text="Results"/>
+<TextBlock Name="MaterialCostText" Margin="0,10,0,0"/>
+<TextBlock Name="MachineCostText"/>
+<TextBlock Name="ProductionCostText"/>
+<TextBlock Name="SellingPriceText" FontSize="28" FontWeight="Bold" Margin="0,15,0,0"/>
+</StackPanel></Border>
+</StackPanel>
+</Grid>
+</ScrollViewer>
+</Window>
