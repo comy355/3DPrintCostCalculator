@@ -6,7 +6,7 @@
 <TextBlock Text="PrintPrice Pro" FontSize="30" FontWeight="Bold"/>
 <StackPanel Orientation="Horizontal" Margin="0,10,0,20">
 <TextBlock Text="Currency:" VerticalAlignment="Center"/>
-<ComboBox Name="CurrencyBox" Width="80" Margin="10,0,0,0" SelectionChanged="CurrencyChanged">
+<ComboBox Name="CurrencyBox" Width="80" Margin="10,0,0,0"
 <ComboBoxItem Content="$"/>
 <ComboBoxItem Content="€"/>
 <ComboBoxItem Content="£"/>
